@@ -1,0 +1,24 @@
+<h1>New event</h1>
+
+<%= form_for :event, url: events_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :date %><br>
+    <%= datetime_select :event, :date %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p> <% end %>
+<%= link_to 'Back', events_path %>
+
