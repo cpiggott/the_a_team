@@ -4,8 +4,18 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.find(:all, :order => "date")
-	@events.strftime("%B %d, %Y")
+#<<<<<<< HEAD
+ #   @events = Event.find(:all, :order => "date")
+#	@events.strftime("%B %d, %Y")
+
+    #@events = Event.all
+	#@events = Event.order(:date)
+	
+	#@events = Event.find(:all, :order => 'date')
+	#@event_months = @events.group_by { |t| t.date. }
+	
+	@events = Event.all(:order => "date ASC")
+#>>>>>>> 8740504ba99eb41e191e0b7105b7a06db8ad1e98
   end
 
   # GET /events/1
@@ -61,7 +71,7 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
