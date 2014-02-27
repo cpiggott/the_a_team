@@ -4,7 +4,8 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.find(:all, :order => "date")
+	@events.strftime("%B %d, %Y")
   end
 
   # GET /events/1
