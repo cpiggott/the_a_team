@@ -11,11 +11,17 @@
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
   display: none;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 10px;
 }
 
 .tab-content > .active,
 .pill-content > .active {
   display: block;
+  border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
 }
 
 .tabs-below > .nav-tabs {
@@ -108,3 +114,4 @@
 }
 
 body { padding-top: 50px; }
+a:hover {color:#A39C8B}

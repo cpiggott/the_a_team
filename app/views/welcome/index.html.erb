@@ -4,10 +4,21 @@
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
-		Computer and Infomation Sciences Student Portal
+  <style>
+	a:hover
+	{
+		background-color:#462574;
+	}
+  </style>
+  <body style="padding-bottom:70px">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#7031BE; padding-top:0px">
+
+	<div class="container-fluid">
+
+            <div class="navbar-header">	
+            	<img class="nav navbar-nav navbar-left"src="/images/cis_logo.jpg" alt="some_text" height="42" width="42" style="padding-top:5px; padding-right:2px; padding-left:7px" /></img>
+      		 <a class="navbar-brand" href="welcome#home" style="color:black">  Computer and Infomation Sciences Student Portal</a>
+            </div>
 	</div>
   </nav>
   
@@ -82,61 +93,18 @@
     </div>
 	
 	<div class="tab-pane" id="employment">
-      <p>I'm in employment.</p>
+      <%= render "employment" %>
     </div>
 	
 	
 	
 	<!--Toggles for classes in CIS department. Place holder until implemented in Rails -->
 	<div class="tab-pane" id="classes">
-      <div class="panel-group" id="accordion2" padding-top="10px">
-		  <div class="panel panel-default">
-			<div class="panel-heading">
-			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
-				  CIS 115 - Intoduction to Computer Science
-				</a>
-			  </h4>
-			</div>
-			<div id="collapseOne2" class="panel-collapse collapse in">
-			  <div class="panel-body">
-				Introduction......
-			  </div>
-			</div>
-		  </div>
-		  <div class="panel panel-default">
-			<div class="panel-heading">
-			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
-				  CIS 200 - Fundamentals of Programming
-				</a>
-			  </h4>
-			</div>
-			<div id="collapseTwo2" class="panel-collapse collapse">
-			  <div class="panel-body">
-				Fundamentals.....
-			  </div>
-			</div>
-		  </div>
-		  <div class="panel panel-default">
-			<div class="panel-heading">
-			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">
-				  CIS 300 - Data Structures
-				</a>
-			  </h4>
-			</div>
-			<div id="collapseThree2" class="panel-collapse collapse">
-			  <div class="panel-body">
-				Data....
-			  </div>
-			</div>
-		  </div>
-		</div>
+		<%= render "classes" %>
     </div>
 	
 	<div class="tab-pane" id="studygroups">
-      <p>I'm in study groups.</p>
+        <%= render "study" %>
     </div>
 	
   </div>
@@ -145,4 +113,16 @@
 </div>
 
   </body>
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" style="text-align:center; background-color:#A39C8B; padding-top:5px">
+  <div class="container-fluid" align="center" style="text-align:center">
+    <ul class="nav navbar-center" align="center" style="text-align:center">
+    	<div style="text-align:center">
+	    	<h3><a href="http://www.ksu.edu" target="_blank" style="color:black; hover {color:#FF00FF}">KSU.EDU</a> - 
+	    	<a href="http://www.cis.ksu.edu" target="_blank" style="color:black">CIS Mainpage</a> - 
+	    	<a href="http://www.k-state.edu/contact/" target="_blank" style="color:black">Contact Us</a></h3>
+	    </div>
+    </ul>
+  </div>
+</nav>
+
 </html>
