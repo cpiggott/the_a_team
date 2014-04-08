@@ -1,0 +1,19 @@
+<div class="panel-group" id="accordionAca" padding-top="10px">
+	<% for c in Academic.all %>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordionAca" href="#collapse<%= c.id %>">
+				  <%=c.name %>
+				</a>
+			  </h4>
+			</div>
+			<div id="collapse<%=c.id%>" class="panel-collapse collapse">
+			  <div class="panel-body">
+				<%= simple_format(c.description) %>
+				<a href="<%= c.link %>"> <font color="#512888"><u><%=c.name%></u></font></a>
+			  </div>
+			</div>
+		  </div>
+	<% end %>
+</div>

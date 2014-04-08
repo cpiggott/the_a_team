@@ -1,0 +1,31 @@
+<h1>Listing academics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Link</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @academics.each do |academic| %>
+      <tr>
+        <td><%= academic.name %></td>
+        <td><%= academic.description %></td>
+        <td><%= academic.link %></td>
+        <td><%= link_to 'Show', academic %></td>
+        <td><%= link_to 'Edit', edit_academic_path(academic) %></td>
+        <td><%= link_to 'Destroy', academic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Academic', new_academic_path %>

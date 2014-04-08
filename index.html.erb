@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+		Computer and Infomation Sciences Student Portal
+	</div>
+  </nav>
+  
+  <!--Set up tabs and what they say-->
+  <div class="tabbable tabs-left"> 
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+    <li><a href="#events" data-toggle="tab">Events</a></li>
+	<li><a href="#clubs" data-toggle="tab">Clubs</a></li>
+	<li><a href="#staff" data-toggle="tab">Staff</a></li>
+	<li><a href="#projects" data-toggle="tab">Projects</a></li>
+	<li><a href="#research" data-toggle="tab">Research</a></li>
+	<li><a href="#academics" data-toggle="tab">Academics</a></li>
+	<li><a href="#employment" data-toggle="tab">Employment</a></li>
+	<li><a href="#classes" data-toggle="tab">Classes</a></li>
+	<li><a href="#studygroups" data-toggle="tab">Study Groups</a></li>
+  </ul>
+  
+ <!--Start of the tab content-->
+ 
+ 
+  <div class="tab-content">
+  
+    <div class="tab-pane active" id="home">
+      <p>I'm in home.</p>
+    </div>
+	
+    <div class="tab-pane" id="events">
+      <p>Howdy, I'm in events. YES!</p>
+    </div>
+	
+	<div class="tab-pane" id="clubs">
+      <%= render "clubs" %>
+    </div>
+	
+	
+	<!--This is the div for the Staff page. It will contain relative information about Faculty and staff
+		incuding links to websites. This will be implemented later in ruby but for now is a place holder.-->
+	<div class="tab-pane" id="staff">
+      <div class="row">
+	  <div class="col-sm-6 col-md-4">
+		<div class="thumbnail">
+		  <img data-src="holder.js/300x200" alt="...">
+		  <div class="caption">
+			<h3>Nathan Bean</h3>
+			<p>GK-12 Program Coordinator, Instructor, Advisor</p>
+			<p><a href="http://people.cis.ksu.edu/~nhb7817/" class="btn btn-primary" role="button">Website</a> <a href="https://cis.ksu.edu/user/252" class="btn btn-default" role="button">CIS Page</a></p>
+		  </div>
+		</div>
+		<div class="thumbnail">
+		  <img data-src="holder.js/300x200" alt="...">
+		  <div class="caption">
+			<h3>Dan Andresen</h3>
+			<p>Associate Professor</p>
+			<p> <a href="http://people.cis.ksu.edu/~dan/" class="btn btn-primary" role="button">Website</a> <a href="https://cis.ksu.edu/user/249" class="btn btn-default" role="button">CIS Page</a></p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+    </div>
+	
+	<div class="tab-pane" id="projects">
+      <p>I'm in projects.</p>
+    </div>
+	
+	<div class="tab-pane" id="research">
+      <p>I'm in research.</p>
+    </div>
+	
+	<div class="tab-pane" id="academics">
+      <p>I'm in academics.</p>
+    </div>
+	
+	<div class="tab-pane" id="employment">
+      <p>I'm in employment.</p>
+    </div>
+	
+	
+	
+	<!--Toggles for classes in CIS department. Place holder until implemented in Rails -->
+	<div class="tab-pane" id="classes">
+      <div class="panel-group" id="accordion2" padding-top="10px">
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+				  CIS 115 - Intoduction to Computer Science
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseOne2" class="panel-collapse collapse in">
+			  <div class="panel-body">
+				Introduction......
+			  </div>
+			</div>
+		  </div>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
+				  CIS 200 - Fundamentals of Programming
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseTwo2" class="panel-collapse collapse">
+			  <div class="panel-body">
+				Fundamentals.....
+			  </div>
+			</div>
+		  </div>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">
+				  CIS 300 - Data Structures
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseThree2" class="panel-collapse collapse">
+			  <div class="panel-body">
+				Data....
+			  </div>
+			</div>
+		  </div>
+		</div>
+    </div>
+	
+	<div class="tab-pane" id="studygroups">
+      <p>I'm in study groups.</p>
+    </div>
+	
+  </div>
+  
+  
+</div>
+
+  </body>
+</html>
