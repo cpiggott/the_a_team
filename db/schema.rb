@@ -11,13 +11,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220214107) do
+ActiveRecord::Schema.define(version: 20140408090346) do
+
+  create_table "academics", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "courses", force: true do |t|
+    t.string   "number"
+    t.text     "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "employments", force: true do |t|
+    t.text     "position"
+    t.text     "company"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", force: true do |t|
     t.string   "name"
     t.datetime "date"
     t.string   "description"
     t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "staffs", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "cis_page"
+    t.string   "personal_page"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "studies", force: true do |t|
+    t.text     "name"
+    t.datetime "date"
+    t.text     "location"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

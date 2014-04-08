@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <% for s in Study.all %>
+    <div class="thumbnail">
+      <!--<img data-src="holder.js/300x200" alt="...">-->
+      <div class="caption">
+        <h3><%=s.name%></h3>
+        <p><%= s.location %></p>
+        <p><%=s.date %></p>
+        <p><%=s.description%></p>
+        <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> -->
+      </div>
+    </div></br>
+    <% end %>
+  </div>
+</div>

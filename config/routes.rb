@@ -1,4 +1,14 @@
 Project::Application.routes.draw do
+  resources :academics
+
+  resources :staffs
+
+  resources :studies
+
+  resources :employments
+
+  resources :courses
+
   resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
