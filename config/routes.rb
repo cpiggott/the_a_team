@@ -1,4 +1,8 @@
 Project::Application.routes.draw do
+  resources :academics
+
+  resources :staffs
+
   resources :studies
 
   resources :employments

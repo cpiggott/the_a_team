@@ -1,0 +1,11 @@
+class CreateAcademics < ActiveRecord::Migration
+  def change
+    create_table :academics do |t|
+      t.string :name
+      t.text :description
+      t.string :link
+
+      t.timestamps
+    end
+  end
+end
