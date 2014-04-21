@@ -1,0 +1,63 @@
+<div class="row" >
+  <div class="col-md-8" style="padding-top:10px">
+    <div id="container">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!--<ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>-->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="/images/campus.jpg" alt="..." style="margin:0 auto">
+            
+          </div>
+          <div class="item">
+            <img src="/images/building.jpg" alt="..." style="margin:0 auto">
+            
+          </div>
+          <div class="item">
+            <img src="/images/students.jpg" alt="..." style="margin:0 auto">
+            
+          </div>
+          
+        </div>
+
+        
+
+        <!-- Controls -->
+        <!--<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>-->
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4" style="padding-top: 10px;">
+      <div class="well well-sm">
+        <%= render "homeClasses" %>
+      </div>
+    </div>
+  <div class="col-md-12" >
+    <div class="col-md-4" style="padding-top: 10px">
+      <div class="well well-sm">
+        <%= render "homeEvents" %>
+      </div>
+    </div>
+    <div class="col-md-4" style="padding-top: 10px">
+      <div class="well well-sm" >
+        <%= render "homeStudy" %>
+      </div>
+    </div>
+    <div class="col-md-4" style="padding-top: 10px">
+      <div class="well well-sm" >
+        <%= render "homeEmployment" %>
+      </div>
+    </div>
+  </div>
+</div>

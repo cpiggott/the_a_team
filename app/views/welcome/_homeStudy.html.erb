@@ -1,0 +1,19 @@
+<div>
+
+	<a href="#study"><h3 style="color:#7031BE"><U>Study Groups</U></h3></a>
+	<% for s in Study.find(:all, :limit=>3, :order=>'date') %>
+		<p><b><u>
+			<%= s.name%>
+		</u></b></p>
+		<p>
+			<%= s.date.strftime("%b %e, %Y at %I:%M%p") %>
+		</p>
+		<p>
+			<%= s.location %>
+		</p>
+		<p>
+			<%= s.description %>
+		</p>
+		<!--<hr style="border:1px solid #000;">-->
+	<%end%>
+</div>
