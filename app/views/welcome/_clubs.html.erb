@@ -1,76 +1,1 @@
-<!--Accordion menu of all clubs offered in the cis department-->
-<!DOCTYPE html>
-<html>
-	<div class="panel-group" id="accordion" padding-top="10px">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-				  ACM
-				</a>
-			  </h4>
-			</div>
-			<div id="collapseOne" class="panel-collapse collapse in">
-			  <div class="panel-body">
-				Meets Tuesdays at 7:00pm in Nichols 126. <a href="http://acm.cis.ksu.edu/"> <font color="#512888"><u>ACM Homepage</u></font></a>
-			  </div>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-				  Mobile App Development
-				</a>
-			  </h4>
-			</div>
-			<div id="collapseTwo" class="panel-collapse collapse">
-			  <div class="panel-body">
-				Meets Thursdays at 7:00pm in Nichols 126.
-			  </div>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-				  Game Development
-				</a>
-			  </h4>
-			</div>
-			<div id="collapseThree" class="panel-collapse collapse">
-			  <div class="panel-body">
-				Meets Wednesdays at 7:00pm in Nichols 126.
-			  </div>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-				  Makerspace
-				</a>
-			  </h4>
-			</div>
-			<div id="collapseFour" class="panel-collapse collapse">
-			  <div class="panel-body">
-				Meets Tuesdays at 7:00pm in Nichols 126.
-			  </div>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-				  Wildcraft
-				</a>
-			  </h4>
-			</div>
-			<div id="collapseFive" class="panel-collapse collapse">
-			  <div class="panel-body">
-				Competitive eSports. Meets Wednesdays and Fridays at 7:00pm in Nichols 122.
-			  </div>
-			</div>
-		</div>		
-	</div>
-</html>
+<div class="panel-group" id="accordionBT13" padding-top="10px">	<% for c in Club.all %>		  <div class="panel panel-default">			<div class="panel-heading">			  <h4 class="panel-title">				<a data-toggle="collapse" data-parent="#accordionBT13" href="#collapse<%= c.id %>">				  <%=c.name%>				</a>			  </h4>			</div>			<div id="collapse<%=c.id%>" class="panel-collapse collapse">			  <div class="panel-body">				<div class="list-group" style="padding-left:25px; padding-right:25px">				    <a class="list-group-item list-group-item-success" href="" data-toggle="modal" data-target="#<%=c.id%>"><h4> <%=c.time%> Click for More Information</h4></a>				</div>				<div class="modal fade" id="<%=c.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabelBT1" aria-hidden="true">				    <div class="modal-dialog">					<div class="modal-content">					    <div class="modal-header">						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>						    <h4 class="modal-title" id="myModalLabelBT1"><%=c.time%></h4>					    </div>					    <div class="modal-body">						<%=c.description%>					    </div>					    <div class="modal-footer">						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>					    </div>				      </div>				</div>			  </div>		    </div>	      </div>	</div>  <% end %></div>

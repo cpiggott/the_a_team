@@ -1,0 +1,36 @@
+<div class="panel-group" id="accordionBT14" padding-top="10px">
+	<% for p in StudentProject.all %>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordionBT14" href="#collapse<%= p.id %>">
+				  <%=p.student%>
+				</a>
+			  </h4>
+			</div>
+			<div id="collapse<%=p.id%>" class="panel-collapse collapse">
+			  <div class="panel-body">
+				<div class="list-group" style="padding-left:25px; padding-right:25px">
+				    <a class="list-group-item list-group-item-success" href="" data-toggle="modal" data-target="#<%=p.id%>"><h4> <%=p.time%> Click for More Information</h4></a>
+				</div>
+				<div class="modal fade" id="<%=p.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabelBT2" aria-hidden="true">
+				    <div class="modal-dialog">
+					<div class="modal-content">
+					    <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						    <h4 class="modal-title" id="myModalLabelBT2"><%=p.time%></h4>
+					    </div>
+					    <div class="modal-body">
+						<%=p.topic%> - <%=p.description%>
+					    </div>
+					    <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					    </div>
+				      </div>
+				</div>
+			  </div>
+		    </div>
+	      </div>
+	</div>
+  <% end %>
+</div>

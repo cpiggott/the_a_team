@@ -1,0 +1,2 @@
+module StudentProjectsHelper
+end
