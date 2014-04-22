@@ -17,6 +17,7 @@ class StudiesController < ApplicationController
     @study = Study.new
   end
 
+
   # GET /studies/1/edit
   def edit
   end

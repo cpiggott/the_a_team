@@ -1,6 +1,6 @@
 <div>
 
-	<a href="#study"><h3 style="color:#7031BE"><U>Study Groups</U></h3></a>
+	<a href="#study" data-toggle="tab"><h3 style="color:#7031BE"><U>Study Groups</U></h3></a>
 	<% for s in Study.find(:all, :limit=>3, :order=>'date') %>
 		<p><b><u>
 			<%= s.name%>

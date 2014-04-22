@@ -1,18 +1,7 @@
 
 <h1>Listing events</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<%= link_to 'New Event', new_event_path %>
 
   <tbody>
    <%= calendar @events do |event| %>
