@@ -1,0 +1,18 @@
+<div>
+	<a href="#events"><h3 style="color:#7031BE"><U>Events</U></h3></a>
+	<% for c in Event.find(:all, :limit=>3, :order=>'date') %>
+		<p><b><u>
+			<%= c.name%>
+		</u></b></p>
+		<p>
+			<%= c.date.strftime("%b %e, %Y at %I:%M%p") %>
+		</p>
+		<p>
+			<%= c.location %>
+		</p>
+		<p>
+			<%= c.description %>
+		</p>
+		<!--<hr style="border:1px solid #000;">-->
+	<%end%>
+</div>

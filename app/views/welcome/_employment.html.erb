@@ -1,6 +1,10 @@
-<div class="list-group" style="padding-left:125px; padding-right:5px">
+<div class="list-group" style="padding-right:5px">
+<% i=0 %>
+<% a = ["#7031BE","black"] %>
 <% for e in Employment.all %>
-  <a class="list-group-item list-group-item-success" href="" data-toggle="modal" data-target="#<%=e.id%>"><h4><%=e.position%> - <%=e.company%></h4></a>
+  <a class="list-group-item list-group-item-success" href="" data-toggle="modal" data-target="#<%=e.id%>" style="color:#7031BE;"><h4><%=e.position%> - <%=e.company%></h4></a>
+  <% i=(i+1)%2 %>
+  
 <% end %>
 </div>
 
@@ -15,7 +19,7 @@
         <h4 class="modal-title" id="myModalLabel"><%=e.position%> - <%=e.company%></h4>
       </div>
       <div class="modal-body">
-        <%=e.description%>
+        <h6><%=simple_format(e.description)%></h6>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

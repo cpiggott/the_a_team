@@ -1,0 +1,13 @@
+<div>
+
+	<a href="#employment"><h3 style="color:#7031BE"><U>Employment</U></h3></a>
+	<% for e in Employment.find(:all, :limit=>3, :order=>'position') %>
+		<p><b><u>
+			<%=e.position%> - <%=e.company%>
+		</u></b></p>
+		<p>
+			<%=simple_format(e.description)%>
+		</p>
+		<!--<hr style="border:1px solid #000;">-->
+	<%end%>
+</div>

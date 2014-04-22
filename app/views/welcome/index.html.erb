@@ -8,43 +8,48 @@
   <style>
 	a:hover
 	{
-		background-color:#462574;
+		background:#462574;
+    
 	}
   </style>
-  <body style="padding-bottom:70px">
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#7031BE; padding-top:0px">
+  <body style="padding-bottom:70px; padding-top:70px; background-color:#EEEDE9">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#7031BE; padding-top:0px">
 
-	<div class="container-fluid">
+	       <div class="container-fluid">
 
             <div class="navbar-header">	
-            	<img class="nav navbar-nav navbar-left"src="/images/cis_logo.jpg" alt="some_text" height="42" width="42" style="padding-top:5px; padding-right:2px; padding-left:7px" /></img>
-      		 <a class="navbar-brand" href="welcome#home" style="color:black">  Computer and Infomation Sciences Student Portal</a>
+            	
+      		    <a class="navbar-brand" href="welcome#home" style="color:white"><img src="/images/cis_logo.jpg" alt="some_text" height="42" width="42" style="padding-top:5px; padding-right:2px; padding-left:5px" /></img> Computer and Infomation Sciences Student Portal</a>
             </div>
-	</div>
-  </nav>
+	       </div>
+      </nav>
   
   <!--Set up tabs and what they say-->
-  <div id="div_sidebar" class="tabbable tabs-left"> 
-  <ul class="nav nav-tabs">
-    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-    <li><a href="#events" data-toggle="tab">Events</a></li>
-	<li><a href="#clubs" data-toggle="tab">Clubs</a></li>
-	<li><a href="#staff" data-toggle="tab">Staff</a></li>
-	<li><a href="#projects" data-toggle="tab">Projects</a></li>
-	<li><a href="#research" data-toggle="tab">Research</a></li>
-	<li><a href="#academics" data-toggle="tab">Academics</a></li>
-	<li><a href="#employment" data-toggle="tab">Employment</a></li>
-	<li><a href="#classes" data-toggle="tab">Classes</a></li>
-	<li><a href="#studygroups" data-toggle="tab">Study Groups</a></li>
-  </ul>
+    <div class="row">
+      <div class="col-md-1">
+      <div id="div_sidebar" class="tabbable tabs-left"> 
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#home" data-toggle="tab" style="color:black">Home</a></li>
+        <li><a href="#events" data-toggle="tab" style="color:black">Events</a></li>
+      	<li><a href="#clubs" data-toggle="tab" style="color:black">Clubs</a></li>
+      	<li><a href="#staff" data-toggle="tab" style="color:black">Staff</a></li>
+      	<li><a href="#projects" data-toggle="tab" style="color:black">Projects</a></li>
+      	<li><a href="#research" data-toggle="tab" style="color:black">Research</a></li>
+      	<li><a href="#academics" data-toggle="tab" style="color:black">Academics</a></li>
+      	<li><a href="#employment" data-toggle="tab" style="color:black">Employment</a></li>
+      	<li><a href="#classes" data-toggle="tab" style="color:black">Classes</a></li>
+      	<li><a href="#studygroups" data-toggle="tab" style="color:black">Study Groups</a></li>
+      </ul>
+    </div>
+  </div>
   
  <!--Start of the tab content-->
  
- 
-  <div class="tab-content">
+  <div class="col-md-11" >
+  <div class="tab-content" >
   
-    <div class="tab-pane active" id="home">
-      <p>I'm in home.</p>
+    <div class="tab-pane active" id="home" >
+      <%= render "home" %>
     </div>
 	
     <div class="tab-pane" id="events">
@@ -65,8 +70,18 @@
 	<!-- Projects page.-->
 
 	<div class="tab-pane" id="projects">
+
 	<%= render "projects" %> 
 	</div>
+
+      <h59><font size="4"><font color="#512888">Research Projects</font></font></h59> 
+
+	<p>To view research and grant information, please visit the <a href="http://www.cis.ksu.edu/research/projects/"> <font color="#512888"><u>Research Projects Page</u></font></a></p>
+
+	
+
+    </div>
+
 	
 	<div class="tab-pane" id="research">
 	<%= render "research" %>
@@ -83,31 +98,33 @@
 	
 	
 	<!--Toggles for classes in CIS department. Place holder until implemented in Rails -->
-	<div class="tab-pane" id="classes">
-		<%= render "classes" %>
-    </div>
+	   <div class="tab-pane" id="classes">
+		    <%= render "classes" %>
+      </div>
 	
-	<div class="tab-pane" id="studygroups">
+	   <div class="tab-pane" id="studygroups">
         <%= render "study" %>
+    </div>
     </div>
 	
   </div>
-  
+  </div>
   
 </div>
 
   </body>
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" style="text-align:center; background-color:#A39C8B; padding-top:5px">
+
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" style="border-top:2px solid black; text-align:center; background-color:#FFFFFF">
   <div class="container-fluid" align="center" style="text-align:center">
     <ul class="nav navbar-center" align="center" style="text-align:center">
     	<div style="text-align:center">
-	    	<h3><a href="http://www.ksu.edu" target="_blank" style="color:black; hover {color:#FF00FF}">KSU.EDU</a> - 
+	    	<h4><a href="http://www.ksu.edu" target="_blank" style="color:black; hover {color:#FF00FF}">KSU.EDU</a> - 
 	    	<a href="http://www.cis.ksu.edu" target="_blank" style="color:black">CIS Mainpage</a> - 
-	    	<a href="http://www.k-state.edu/contact/" target="_blank" style="color:black">Contact Us</a></h3>
+	    	<a href="http://www.k-state.edu/contact/" target="_blank" style="color:black">Contact Us</a></h4>
 	    </div>
     </ul>
   </div>
 </nav>
 
 </html>
-<!--167cd8ffffa48da6bb5750b4eb5a6ab016b14e85-->
+
