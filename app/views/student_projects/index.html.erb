@@ -1,0 +1,33 @@
+<h1>Listing student_projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Time</th>
+      <th>Topic</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_projects.each do |student_project| %>
+      <tr>
+        <td><%= student_project.student %></td>
+        <td><%= student_project.time %></td>
+        <td><%= student_project.topic %></td>
+        <td><%= student_project.description %></td>
+        <td><%= link_to 'Show', student_project %></td>
+        <td><%= link_to 'Edit', edit_student_project_path(student_project) %></td>
+        <td><%= link_to 'Destroy', student_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student project', new_student_project_path %>

@@ -1,4 +1,10 @@
 Project::Application.routes.draw do
+  resources :researches
+
+  resources :student_projects
+
+  resources :clubs
+
   resources :academics
 
   resources :staffs
