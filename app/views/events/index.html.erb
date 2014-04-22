@@ -15,45 +15,9 @@
   </thead>
 
   <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.date %></td>
-        <td><%= event.description %></td>
-        <td><%= event.location %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<h1>Calendar</h1>
-<p> Calendar of Events sorted by day. </p>
-
-<%= link_to 'New Event', new_event_path %>
-<p> <br/> <br/></p>
-
-<%  date = 1.day.ago(@events.first.date.to_date) rescue nil # increment the day
-    @events.each do |event| 
-      if date < event.date.to_date 
-        date = event.date.to_date %>
-        <div style="background: #8c2bdb;margin-top: 5px; margin-bottom: 5px;" class="rounded"><b><span style="padding: 5px"><%=h date %></span></b></div>
-      <%end%>
-
-      <p>
-		<h3><%= link_to event.name, event %></h3> 
-		<b>Description: </b> <%= event.description %><br/>
-		<b>Date: </b> <%= event.date %><br/>
-		<b>Location: </b> <%= event.location %><br/>
-		<%= link_to 'Show', event %>
-		<%= link_to 'Edit', edit_event_path(event) %>
-		<%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
-		
-	</p>
-
-<%  end%>
+   <%= calendar @events do |event| %>
+  <%= link_to event.name, event %>
+<% end %>
 
 
 

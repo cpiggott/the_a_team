@@ -1,11 +1,11 @@
 <div class="container">
 	
-	<div class="row clearfix" padding-top="10px">
-		<div class="row" padding-top="10px">
-		<div class="row">
-			<% for c in Staff.all %>
+	
+		
+		
+			<% for c in Staff.all.sort_by!{ |m| m.name.downcase} %>
 			
-				<div class="col-md-4">
+				<div class="col-md-4" padding-top="10px" padding-bottom="10px">
 					<div class="thumbnail">
 						<img alt="300x200" src="<%= c.image %>" />
 						<div class="caption">
@@ -32,8 +32,8 @@
 				
 			
 			<% end %>
-			</div>
-		</div>
-	</div>
+			
+		
+	
 	
 </div>
