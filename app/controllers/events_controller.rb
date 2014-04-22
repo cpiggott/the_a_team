@@ -15,7 +15,7 @@ class EventsController < ApplicationController
   end
   
   def calendar
-    @events = Event.all
+    @events = Event.all(:order => "date ASC")
   end
 
   # GET /events/new

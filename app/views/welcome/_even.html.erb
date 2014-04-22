@@ -1,9 +1,9 @@
 <div class="container">
 <h1>Calendar</h1>
-<p> Calendar of Events sorted by day. </p>
 
-	
-		<%= calendar @events do |event| %>
+
+	    
+		<%= calendar Event.all do |event| %>
 		<%= link_to event.name, event %>
 		<% end %>
 	
