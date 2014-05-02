@@ -1,4 +1,5 @@
 Project::Application.routes.draw do
+  get "admin/index"
   resources :researches
 
   resources :student_projects
