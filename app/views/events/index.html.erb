@@ -1,7 +1,8 @@
 
-<h1>Listing events</h1>
+<h1>Listing Events</h1>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_event_path %><br>
+<a href="/admin/index">Back to Admin Page</a>
 
   <tbody>
    <%= calendar @events do |event| %>
