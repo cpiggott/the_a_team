@@ -48,4 +48,4 @@ end
 
 gem "simple_calendar"
 
-
+gem "bcrypt-ruby", :require => "bcrypt"
