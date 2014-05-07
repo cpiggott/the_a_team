@@ -32,9 +32,11 @@
               
             </div>
 	       </div>
-         <ul class="nav navbar-nav navbar-right" style="padding-top:5px; padding-right:8px">
-            <a href="/admin/index" class="btn btn-link" role="button" style="color:white"><h4>Admin</h4></a>
-         </ul>
+         <% if current_user %>
+           <ul class="nav navbar-nav navbar-right" style="padding-top:5px; padding-right:8px">
+              <a href="/admin/index" class="btn btn-link" role="button" style="color:white"><h4>Edit Content</h4></a>
+           </ul>
+         <% end %>
       </nav>
 
 

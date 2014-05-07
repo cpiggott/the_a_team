@@ -4,9 +4,32 @@
 
 	    
 		<%= calendar Event.all do |event| %>
-		<%= link_to event.name, event %>
+		<!--<%= link_to event.name, event %>-->
+		<a href="" data-toggle="modal" data-target="#eve<%=event.id%>" style="color:#7031BE;"><h6><%=event.name%></h6></a>
 		<% end %>
 		
 	
 	
 </div>
+
+<% for e in Event.all %>
+<div class="modal fade" id="eve<%=e.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><%=e.name%></h4>
+      </div>
+      <div class="modal-body">
+      	<h6><%=e.date.strftime("%b %e, %Y at %I:%M%p")%></h6>
+        <h6><%=e.description%></h6>
+        <h6><%=e.location%></h6>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
