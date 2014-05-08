@@ -31,4 +31,38 @@
   
   
   <p class="button"><%= f.submit %></p>
+<h1>Sign Up</h1>
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+	<%= radio_button_tag(:role, "student") %>
+	<%= label_tag(:role, "Student") %>
+	<%= radio_button_tag(:role, "club") %>
+	<%= label_tag(:role, "Club") %>
+	<%= radio_button_tag(:role, "admin") %>
+	<%= label_tag(:role, "Admin") %>
+  
+  
+  <p class="button"><%= f.submit %></p>
 <% end %>
