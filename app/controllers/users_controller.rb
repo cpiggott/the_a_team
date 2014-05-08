@@ -5,6 +5,10 @@ end
 
 def create
   @user = User.new(user_params)
+  #@user.role = params[:role]
+  @role = Role.find_by_r(params[:role_input])
+  @user.roles << @role 
+
   if @user.save
     redirect_to root_url, :notice => "Signed up!"
   else

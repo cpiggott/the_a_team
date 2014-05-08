@@ -23,12 +23,11 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-	<%= radio_button_tag(:role, "student") %>
-	<%= label_tag(:age_child, "Student") %>
-	<%= radio_button_tag(:role, "club") %>
-	<%= label_tag(:age_adult, "Club") %>
-	<%= radio_button_tag(:role, "admin") %>
-	<%= label_tag(:age_adult, "Admin") %>
+
+  <p>
+    <%= label :role_input, "Role: Enter club, student, or admin" %><br>
+    <%= text_field :role_input, @role_input %><br>
+	
   
   
   <p class="button"><%= f.submit %></p>

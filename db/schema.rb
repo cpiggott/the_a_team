@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507144555) do
+ActiveRecord::Schema.define(version: 20140508133513) do
 
   create_table "academics", force: true do |t|
     t.string   "name"
@@ -62,6 +62,17 @@ ActiveRecord::Schema.define(version: 20140507144555) do
     t.datetime "updated_at"
   end
 
+  create_table "roles", force: true do |t|
+    t.string   "r"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles_users", force: true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
+
   create_table "staffs", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -96,8 +107,6 @@ ActiveRecord::Schema.define(version: 20140507144555) do
     t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "role"
-    t.string   "string"
   end
 
 end

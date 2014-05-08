@@ -1,19 +1,47 @@
-<% if current_user %>
-<h3>Select an option</h3>
 
-<div>
-  <h4><a href="/employments">Employment</a> </br>
-  <a href="/events">Events</a> </br>
-  <a href="/clubs">Clubs</a> </br>
-  <a href="/staffs">Staff</a> </br>
-  <a href="/researches">Research</a> </br>
-  <a href="/academics">Academics</a> </br>
-  <a href="/courses">Classes</a> </br>
-  <a href="/studies">Study Groups</a> </br>
-  <a href="/student_projects">Student Projects</a> </br>
+<% if current_user.roles.any?{|role| role.r == "student"} %>
+  <h3>Select an option</h3>
 
-  <br><br>
-  <a href="/">Home</a> </br></h4>
+  <div>
+    <h4><a href="/studies">Study Groups</a> </br>
 
-</div>
+    <br><br>
+    <a href="/">Home</a> </br></h4>
+
+  </div>
+<% end %>
+<% if current_user.roles.any?{|role| role.r == "admin"} %>
+  <h3>Select an option</h3>
+
+  <div>
+    <h4><a href="/employments">Employment</a> </br>
+    <a href="/events">Events</a> </br>
+    <a href="/clubs">Clubs</a> </br>
+    <a href="/staffs">Staff</a> </br>
+    <a href="/researches">Research</a> </br>
+    <a href="/academics">Academics</a> </br>
+    <a href="/courses">Classes</a> </br>
+    <a href="/studies">Study Groups</a> </br>
+    <a href="/student_projects">Student Projects</a> </br>
+
+    <br><br>
+    <a href="/">Home</a> </br></h4>
+
+  </div>
+<% end %>
+<% if current_user.roles.any?{|role| role.r == "club"} %>
+  <h3>Select an option</h3>
+
+  <div>
+    <h4>
+    <a href="/events">Events</a> </br>
+    <a href="/clubs">Clubs</a> </br>
+    
+    <a href="/studies">Study Groups</a> </br>
+   
+
+    <br><br>
+    <a href="/">Home</a> </br></h4>
+
+  </div>
 <% end %>
