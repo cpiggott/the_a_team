@@ -4,17 +4,17 @@
 		  <div class="panel panel-default">
 			<div class="panel-heading">
 			  <h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordionBT14" href="#collapse<%= p.id %>">
+				<a data-toggle="collapse" data-parent="#accordionBT14" href="#projcollapse<%= p.id %>">
 				  <%=p.student%>
 				</a>
 			  </h4>
 			</div>
-			<div id="collapse<%=p.id%>" class="panel-collapse collapse">
+			<div id="projcollapse<%=p.id%>" class="panel-collapse collapse">
 			  <div class="panel-body">
 				<div class="list-group" style="padding-left:25px; padding-right:25px">
-				    <a class="list-group-item list-group-item-success" href="" data-toggle="modal" data-target="#<%=p.id%>"><h4> <%=p.time%> Click for More Information</h4></a>
+				    <a class="list-group-item list-group-item-success" href="" data-toggle="modal" data-target="#proj<%=p.id%>"><h4> <%=p.time%> Click for More Information</h4></a>
 				</div>
-				<div class="modal fade" id="<%=p.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabelBT2" aria-hidden="true">
+				<div class="modal fade" id="proj<%=p.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabelBT2" aria-hidden="true">
 				    <div class="modal-dialog">
 					<div class="modal-content">
 					    <div class="modal-header">

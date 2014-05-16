@@ -1,6 +1,7 @@
 
+
 <% if current_user.roles.any?{|role| role.r == "student"} %>
-<% if current_user.role == "student" %>
+<% if current_user.roles[0].r == "student" %>
   <h3>Select an option</h3>
 
   <div>
@@ -11,8 +12,9 @@
 
   </div>
 <% end %>
+<% end %>
 <% if current_user.roles.any?{|role| role.r == "admin"} %>
-<% if current_user.role == "admin" %>
+<% if current_user.roles[0].r == "admin" %>
   <h3>Select an option</h3>
 
   <div>
@@ -31,8 +33,9 @@
 
   </div>
 <% end %>
+<% end %>
 <% if current_user.roles.any?{|role| role.r == "club"} %>
-<% if current_user.role == "clubs" %>
+<% if current_user.roles[0].r == "clubs" %>
   <h3>Select an option</h3>
 
   <div>
@@ -47,4 +50,5 @@
     <a href="/">Home</a> </br></h4>
 
   </div>
+<% end %>
 <% end %>
